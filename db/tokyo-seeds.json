@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Digital Art Museum",
+        "category": "entertainment",
+        "address": "Odaiba Palette Town 2F, 1-3-8 Aomi, Koto-ku, Tokyo, Japan",
+        "google-map":"https://goo.gl/maps/wfW8S5jnULjXGYJSA",
+        "website": "https://borderless.teamlab.art/",
+        "time": "1-2 hours",
+        "price": "$16-32 USD"
+    },
+    {
+        "title": "Tsukiji Fish Market",
+        "category": "food",
+        "address": "4 Chome-13 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
+        "google-map":"https://goo.gl/maps/KPUcMwD7ePnwGNqs8",
+        "website": "None",
+        "time": "Varies",
+        "price": "Varies"
+    },
+    {
+        "title": "",
+        "category": "",
+        "address": "",
+        "google-map":"",
+        "website": "",
+        "time": "",
+        "price": ""
+    }
+]
