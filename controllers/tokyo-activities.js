@@ -1,21 +1,24 @@
 const express = require('express')
 const router = express.Router()
-const TokyoActivity = require('../models/tokyo-activities')
+let TokyoActivity = require('../models/tokyo-activities')
 
 //GET routes
 
 //HOME - view all acitivities
 router.get('/', (req, res, next) => {
-    // console.log('home route hit')
     TokyoActivity.find({})
-    .then(activities => res.send(activities))
+    .then(activities => {
+        res.render('index', {details: activities})
+    })
     .catch(next)
 })
 
 //Find by ID - view a single activity
 router.get('/:id', (req, res, next) =>{
     TokyoActivity.findById({_id:req.params.id})
-    .then(activities => res.send(activities))
+    .then(activityById => {
+        res.render('show', {details: activityById})
+    })
     .catch(next)
 })
 
