@@ -13,6 +13,21 @@ router.get('/', (req, res, next) => {
     .catch(next)
 })
 
+//Find by Categories
+//Find by FOOD
+router.get('/:category', (req, res, next) => {
+    // res.send("hit")
+    TokyoActivity.find(
+        {category: req.params.category
+        })
+        .then(activities => {
+            // console.log(activities)
+            // console.log(req.params.category)
+            res.render('index', {details: activities})
+        })
+        .catch(next)
+})
+
 //Find by ID - view a single activity
 router.get('/:id', (req, res, next) =>{
     TokyoActivity.findById({_id:req.params.id})
@@ -49,8 +64,7 @@ router.put('/:id', (req, res, next) => {
         {new:true}
     )
     .then(activities => {
-        res.send(activities)
-        //add ejs here later on
+        res.render('show',{details: activities})
     })
     .catch(next)
 })

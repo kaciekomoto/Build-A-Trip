@@ -1,23 +1,26 @@
 <body>
     <h1>Build-A-Trip</h1>
    <a href='/tokyo/new'></a>
-    <ul style="display:flex; justify-content: space-between;">
+    <ul>
         <li><a href='/tokyo'>all</a></li>
         <li><a href='/tokyo/food'>food</a></li>
-        <li><a href='/tokyo/stays'>stays</a></li>
+        <li><a href='/tokyo/lifestyle'>lifestyle</a></li>
         <li><a href='/tokyo/entertainment'>entertainment</a></li>
-        <li><a href='/tokyo/nightlife'>nightlife</a></li>
         <li><a href='/tokyo/culture'>culture</a></li>
         <li><a href='/tokyo/shopping'>shopping</a></li>
-        <li><a href='/tokyo/favorites'>favorites</a></li>
      </ul>
     <div>
         <% details.forEach(data => { %>
             <h3><%= data.title %></h3>
             <p><%= data.price %></p>
-            <p><%= data.address %></p>
+            <div>
+                <a href=<% data.googleMap%>>GOOGLE MAPS ICON</a>
+                <p><%= data.address %></p>
+            </div>
             <p><%= data.website %></p>
-            <p><%= data.time %></p>
+            <p>Kacie's Tips: "<%= data.description %>"</p>
+            <p>Approximate Time for Activity: <%= data.time %></p>
+            <button>View</button>
         <% }) %>
     </div>
 </body>

@@ -5,8 +5,10 @@
         "address": "Odaiba Palette Town 2F, 1-3-8 Aomi, Koto-ku, Tokyo, Japan",
         "google-map":"https://goo.gl/maps/wfW8S5jnULjXGYJSA",
         "website": "https://borderless.teamlab.art/",
+        "description": "Pretty lights go here",
         "time": "1-2 hours",
-        "price": "$16-32 USD"
+        "english": "Yes",
+        "price": "$$"
     },
     {
         "title": "Tsukiji Fish Market",
@@ -14,16 +16,64 @@
         "address": "4 Chome-13 Tsukiji, Chuo City, Tokyo 104-0045, Japan",
         "google-map":"https://goo.gl/maps/KPUcMwD7ePnwGNqs8",
         "website": "None",
+        "description": "YUMMY YUMM get fresh sushi and tamagoyaki too",
         "time": "Varies",
-        "price": "Varies"
+        "english": "Yes",
+        "price": "$-$$"
     },
     {
-        "title": "",
-        "category": "",
-        "address": "",
-        "google-map":"",
-        "website": "",
-        "time": "",
-        "price": ""
+        "title": "Ciel's Head Spa",
+        "category": "lifestyle",
+        "address": "2-13-5 Minamiikebukuro, Toshima-ku, Tokyo, Ishikawa Building 2nd floor",
+        "google-map":"https://g.page/cielsheadspa?share",
+        "website": "https://www.ciel.salon/",
+        "description": "Get yo' scalp cleaned here. I haven't been to this particular location but have had similar service done while getting my hair done. Although this place specializes in Head only",
+        "time": "1-2 hours",
+        "english": "Doesn't look like it. Have your hotel concierge try helping you book!",
+        "price": "$$$"
+    },
+    {
+        "title":"Hayato Salon Roppongi",
+        "category": "lifestyle",
+        "address": "〒106-0032 Tokyo, Minato City, Roppongi, 3 Chome−7−1 Tokyo Plaza 206",
+        "google-map":"https://g.page/hayatotokyoroppongi?share",
+        "website": "https://en.hayatosalons.com/page/japan/",
+        "description": "This was my go-to spot to get my hair done when I was living in Tokyo. You can add on a short head spa of hair treatment in addition to getting your hair cut. The Japanese hair salon experience is quite unique if your up for it.",
+        "english": "Yes",
+        "time": "Varies",
+        "price": "$$-$$$"
+    },
+    {
+        "title": "Tsukiji Cooking",
+        "category": "culture",
+        "address": "Japan, 〒104-0045 Tokyo, Chuo City, Tsukiji, 6 Chome−22−3 ウィンド築地 Ⅱ ビル 6 階",
+        "google-map":"https://goo.gl/maps/r9WSWPa8dt5UHNeB7",
+        "website": "http://tsukiji-cooking.com/",
+        "description": "I haven't done a cooking class in Tokyo just yet, but it's been on the bucket list/ If you go, let me know!",
+        "english": "Yes",
+        "time": "2-6 hours",
+        "price": "$$-$$$$"
+    },
+    {
+        "title": "Watch a Sumo Tournament",
+        "category": "entertainment",
+        "address": "Ryogoku Kokugikan Arena, 1 Chome-3-28 Yokoami, Sumida City, Tokyo, 130-0015",
+        "google-map":"https://goo.gl/maps/SsE8BEAaSpDGHxKt9",
+        "website": "https://www.sumo.or.jp/En/",
+        "description": "If you're traveling in January, May, or September you may be able to catch a Sumo Tournament! See here for booking tickets in English: sumo.pia.jp/en/",
+        "english": "Yes",
+        "time": "2 hours - 1 day",
+        "price": "$$-$$$$"
+    },
+    {
+        "title": "Shopping in Ginza",
+        "category": "shopping",
+        "address": "Chuo City, Tokyo 104-0061",
+        "google-map":"https://goo.gl/maps/YkzSDCVkwU6n8YL56",
+        "website": "n/a",
+        "description": "Filled with Department stores and stand-alone stores. Get your picture at Tokyo Plaza's Kaleidescope Staircase then enjoy shopping!",
+        "english": "Yes",
+        "time": "Varies",
+        "price": "Varies"
     }
 ]
