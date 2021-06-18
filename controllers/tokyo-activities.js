@@ -8,40 +8,51 @@ let TokyoActivity = require('../models/tokyo-activities')
 router.get('/', (req, res, next) => {
     TokyoActivity.find({})
     .then(activities => {
-        res.render('index', {details: activities})
+        res.render('index', {data: activities})
+    })
+    .catch(next)
+})
+
+//NEW route
+router.get('/new', (req, res, next) => {
+    res.render('new')
+})
+
+//Edit Route - edit new items
+router.get('/edit/:id', (req, res, next) => {
+    TokyoActivity.findById(req.params.id)
+        .then (activity => {
+            res.render('edit', {data: activity})
+        })
+})
+
+//Find by ID - view more of an activity
+router.get('/:id', (req, res, next) =>{
+    TokyoActivity.findById({_id:req.params.id})
+    .then(activities => {
+        console.log(activities)
+        res.render('show', {data: activities})
     })
     .catch(next)
 })
 
 //Find by Categories
-//Find by FOOD
 router.get('/:category', (req, res, next) => {
     // res.send("hit")
-    TokyoActivity.find(
-        {category: req.params.category
-        })
-        .then(activities => {
-            // console.log(activities)
-            // console.log(req.params.category)
-            res.render('index', {details: activities})
+    TokyoActivity.find({category: req.params.category})
+    .then(activities => {
+        // console.log(activities)
+        // console.log(req.params.category)
+        res.render('index', {data: activities})
         })
         .catch(next)
-})
-
-//Find by ID - view a single activity
-router.get('/:id', (req, res, next) =>{
-    TokyoActivity.findById({_id:req.params.id})
-    .then(activityById => {
-        res.render('show', {details: activityById})
-    })
-    .catch(next)
 })
 
 
 //CRUD routes
 //CREATE - create their own activity
 router.post('/', (req, res, next) => {
-    console.log(req.body);
+    // res.send(req.body);
     TokyoActivity.create(req.body)
     .then(activities => {
         console.log(activities)
@@ -51,7 +62,7 @@ router.post('/', (req, res, next) => {
 })
 
 //UPDATE
-router.put('/:id', (req, res, next) => {
+router.put('/edit/:id', (req, res, next) => {
     console.log(req.body)
     TokyoActivity.findOneAndUpdate(
         {_id: req.params.id},
@@ -64,7 +75,7 @@ router.put('/:id', (req, res, next) => {
         {new:true}
     )
     .then(activities => {
-        res.render('show',{details: activities})
+        res.render('show',{data: activities})
     })
     .catch(next)
 })

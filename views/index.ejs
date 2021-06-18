@@ -1,6 +1,5 @@
 <body>
-    <h1>Build-A-Trip</h1>
-   <a href='/tokyo/new'></a>
+    <a href='/tokyo/new'><span>Create activity</span></a>
     <ul>
         <li><a href='/tokyo'>all</a></li>
         <li><a href='/tokyo/food'>food</a></li>
@@ -10,17 +9,21 @@
         <li><a href='/tokyo/shopping'>shopping</a></li>
      </ul>
     <div>
-        <% details.forEach(data => { %>
-            <h3><%= data.title %></h3>
-            <p><%= data.price %></p>
+        <% data.forEach(details => { %>
+            <h3><%= details.title %></h3>
+            <p><%= details.price %></p>
             <div>
-                <a href=<% data.googleMap%>>GOOGLE MAPS ICON</a>
-                <p><%= data.address %></p>
+                <a href="<% details.googleMap %>"" >GOOGLE MAPS ICON</a>
+                <p><%= details.address %></p>
             </div>
-            <p><%= data.website %></p>
-            <p>Kacie's Tips: "<%= data.description %>"</p>
-            <p>Approximate Time for Activity: <%= data.time %></p>
-            <button>View</button>
+            <p><%= details.website %></p>
+            <p>Approximate Time for Activity: <%= details.time %></p>
+            <a href="/tokyo/<%= details.id %>">Read More</a>
+            <a href="/tokyo/####">Add to Itinerary</a>
+            <a href="/tokyo/edit/<%= details.id %>/">Edit</a>
+            <form action="/tokyo/<%= details.id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete"/>
+            </form>
         <% }) %>
     </div>
 </body>
