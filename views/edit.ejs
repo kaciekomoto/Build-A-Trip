@@ -1,6 +1,7 @@
 <h2>Edit Activity:</h2>
 
-<form action="/users/edit/<%= data.id %>/?_method=put" method="POST">
+  <form action="/users/<%= data.id %>?_method=put" method="POST">
+
     <div>
       <label for="title" class="labels">Title:</label>
       <input type="text" id="title" name="title" value="<%=data.title%>">
@@ -15,7 +16,7 @@
     </div>
     <div>
       <label for="map" class="labels">google map link:</label>
-      <input type="text" id="map" name="map" value="<%=data.map%>">
+      <input type="text" id="map" name="googleMap" value="<%=data.map%>">
     </div>
     <div>
       <label for="website" class="labels">Website link:</label>
@@ -37,7 +38,6 @@
       <label for="price" class="labels">Price:</label>
       <input type="text" id="price" name="price" value="<%=data.price%>">
     </div>  
-
-    <input type="submit" value="Update"/>
-    <a href="/users">Cancel</a>
+      <input type="submit" value="Update">
   </form>
+      <a href="/users">Cancel</a>

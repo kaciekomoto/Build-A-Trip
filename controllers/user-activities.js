@@ -1,10 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const UserActivity = require('../models/user-activities')
-let TokyoActivity = require('../models/tokyo-activities')
 
 //GET routes
-// HOME - view all acitivities
+//HOME - view all acitivities
 router.get('/', (req, res, next) => {
     UserActivity.find({})
     .then(activities => {
@@ -18,13 +17,12 @@ router.get('/new', (req, res, next) => {
     res.render('new')
 })
 
-//****** HAVING TROUBLE WITH THE TWO GET ROUTES BELOW - ORDER DETERMINES WHICH ONE WORKS ******** //
 //Find by ID - view more of an activity
 router.get('/:id', (req, res, next) =>{
     UserActivity.findById({_id:req.params.id})
     .then(activities => {
         console.log(activities)
-        res.render('show', {data: activities})
+        res.render('../views/users/user-show', {data: activities})
     })
     .catch(next)
 })
@@ -38,7 +36,7 @@ router.get('/edit/:id', (req, res, next) => {
 })
 
 
-//CRUD -Build their itinerary
+//CRUD - Build their itinerary
 //CREATE - create their own activity
 router.post('/', (req, res, next) => {
     // res.send(req.body);
@@ -51,15 +49,15 @@ router.post('/', (req, res, next) => {
 })
 
 //UPDATE
-router.put('/edit/:id', (req, res, next) => {
+router.put('/:id', (req, res, next) => {
     console.log(req.body)
     UserActivity.findOneAndUpdate(
         {_id: req.params.id},
-        {title: req.params.title},
+        {title:req.body.title},
         {new:true}
     )
     .then(activities => {
-        res.render('show',{data: activities})
+        res.render('../views/users/user-show',{data: activities})
     })
     .catch(next)
 })

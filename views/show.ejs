@@ -1,6 +1,26 @@
 <body>
-    <div>
-        <h3><%= data.title %></h3> 
+    <ul>
+        <li><a href='/tokyo'>all</a></li>
+        <li><a href='/tokyo/food'>food</a></li>
+        <li><a href='/tokyo/lifestyle'>lifestyle</a></li>
+        <li><a href='/tokyo/entertainment'>entertainment</a></li>
+        <li><a href='/tokyo/culture'>culture</a></li>
+        <li><a href='/tokyo/shopping'>shopping</a></li>
+     </ul>
+        <div class="activity-container">
+            <h3 class="labels"><%= details.title %></h3>
+            <p class="labels" class="details"><%= details.category%></p>
+            <p><%= details.price %></p>
+            <a href="<% details.googleMap %>"" >MAPS ICON</a>
+            <p>Address: <%= details.address %></p>
+            <p>Website: <%= details.website %></p>
+            <p>Approximate Time for Activity: <%= details.time %></p>
+
+            <ul class= "activity-controls">
+                <li><a href="/tokyo/">Cancel</a></li>
+                <li><a href="/tokyo/####">Add to Itinerary</a></li>
+            </ul>
+            </div>
+    
     </div>
 </body>
-

@@ -12,18 +12,6 @@ router.get('/', (req, res, next) => {
     .catch(next)
 })
 
-//NEW route
-router.get('/new', (req, res, next) => {
-    res.render('new')
-})
-
-//Edit Route - edit new items
-router.get('/edit/:id', (req, res, next) => {
-    TokyoActivity.findById(req.params.id)
-        .then (activity => {
-            res.render('edit', {data: activity})
-        })
-})
 
 //****** HAVING TROUBLE WITH THE TWO GET ROUTES BELOW - ORDER DETERMINES WHICH ONE WORKS ******** //
 //Find by ID - view more of an activity
@@ -31,7 +19,7 @@ router.get('/:id', (req, res, next) =>{
     TokyoActivity.findById({_id:req.params.id})
     .then(activities => {
         console.log(activities)
-        res.render('show', {data: activities})
+        res.render('show', {details: activities})
     })
     .catch(next)
 })
@@ -47,6 +35,8 @@ router.get('/:category', (req, res, next) => {
         })
         .catch(next)
 })
+
+
 
 
 // //CRUD routes
