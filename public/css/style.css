@@ -1,11 +1,84 @@
-h1 {
-    color: black;
-}
-
 h3{
     color: rosybrown;
 }
 
 p{
     color: black;
+}
+
+.labels {
+    color: grey;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CCE7FF;
+    margin: 0px 0px;
+    border: none;
+    height: 60px;
+}
+.nav-bar-left {
+    display:flex;
+    flex-direction: row;
+    justify-self: start;
+    margin-left: 20px;
+}
+#app-title {
+    color: black;
+    font-size: 1.25rem;
+}
+
+.nav-bar-list {
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    color: #000;
+    font-size: 0.9rem;
+    padding: 0 10px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+}
+.nav-item a:hover {
+    color: #3498db;
+}
+.nav-bar-right {
+    justify-content: flex-end;
+    align-items: center;
+}
+#create-btn {
+    background: #3498db;
+    border-radius: 15px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+  }
+
+/* Index page formatting*/
+  .filter-bar {
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 20px 10px;
+    max-width: 60%
+  }
+
+.activity-container {
+    border: 1px solid #3b3b3b;
+    width: 60%;
+    margin: 20px;
 }

@@ -1,6 +1,6 @@
 const seedData = require('./tokyo-seeds.json')
 const TokyoActivity = require('../models/tokyo-activities.js')
-const User = require('../models/user.js')
+const User = require('../models/user-activities.js')
 
 
 TokyoActivity.deleteMany({})
