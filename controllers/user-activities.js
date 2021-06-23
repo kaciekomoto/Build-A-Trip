@@ -2,15 +2,32 @@ const express = require('express')
 const router = express.Router()
 const UserActivity = require('../models/user-activities')
 
+
 //GET routes
 //HOME - view all acitivities
 router.get('/', (req, res, next) => {
     UserActivity.find({})
+    // UserActivity.find(function(){
+    //     let addActivity = document.querySelector('.activity-container')
+    //     let itineraryArray = []
+    //     addActivity.addEventListener("click", (e) => {
+    //         e.preventDefault();
+    //         let addToArray = e.target.childNodes
+    //         itineraryArray.push(addToArray)
+    //         console.log(itineraryArray)
+    //     })
+    // })
     .then(activities => {
         res.render('../views/users/user-index', {data: activities})
     })
     .catch(next)
 })
+
+// //Itinerary
+// router.get('/itinerary', function(req, res, next) {
+//     let activityId 
+// })
+
 
 //NEW route
 router.get('/new', (req, res, next) => {
@@ -34,7 +51,6 @@ router.get('/edit/:id', (req, res, next) => {
             res.render('edit', {data: activity})
         })
 })
-
 
 //CRUD - Build their itinerary
 //CREATE - create their own activity

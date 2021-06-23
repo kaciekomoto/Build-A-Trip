@@ -3,6 +3,8 @@ const app = express()
 const cors = require('cors')
 const methodOverride = require('method-override');
 const ejsLayouts = require('express-ejs-layouts');
+// const MongoStore = require('connect-mongo') (session);
+
 // const TokyoActivity = require('./models/tokyo-activities');
 const tokyoController = require('./controllers/tokyo-activities')
 const userController = require('./controllers/user-activities')
@@ -14,6 +16,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
 app.use(methodOverride('_method'))
+// app.use(session({
+//   store: new MongoStore({mongooseConnection: mongoose.connection}),
+//   cookie: {maxAge: 180 * 60 * 1000}
+// }))
 
 //Set up Static files (i.e. for CSS)
 app.use(express.static(__dirname + "/public"))

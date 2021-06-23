@@ -1,20 +1,48 @@
 <body>
+ <main>
+    <div class="nav-bar-right">
+        <a href='/users/new'><span id="create-btn">Create activity</span></a>
+    </div>
      <% data.forEach(details => { %>
         <div class="activity-container">
-            <h3><%= details.title %></h3>
-            <p><%= details.price %></p>
-            <a href="<% details.googleMap %>"" >MAPS ICON</a>
-            <p>Address: <%= details.address %></p>
-            <p>Website: <%= details.website %></p>
-            <p>Approximate Time for Activity: <%= details.time %></p>
-            <ul class= "activity-controls">
-                <li><a href="/users/<%= details.id %>">Read More</a></li>
-                <li><a href="/users/####">Add to Itinerary</a></li>
-                <li><a href="/users/edit/<%= details.id %>/">Edit</a></li>
-                <li><form action="/users/<%= details.id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete"/>
-                </form></li>
-            </ul>
+        <h2 class="text-body" id="title"><%= details.title %></h2>
+        <p class="text-body" id="price"><%= details.price %></p>
+        <a href="<%= details.googleMap %>" class="text-body" id="google-map" >MAPS ICON</a>
+       <p class="text-body" id="address"><%= details.address %></p>
+       <!-- <p class="text-body" id="website">Website: <%= details.website %></p> -->
+       <p class="text-body" id="time">Approximate Time for Activity: <%= details.time %></p>
+       <ul class= "activity-controls">
+           <li><a href="/users/<%= details.id %>" class="activity-btn" id="read-more-btn">Read More</a></li>
+           <li><a class="activity-btn" id="add-btn">Add to Itinerary</a></li>
+           <li><a href="/users/edit/<%= details.id %>/" class="activity-btn" id="edit-btn">Edit</a></li>
+            <li><form action="/users/<%= details.id %>?_method=DELETE" method="POST">
+                <input class="activity-btn" id="delete-btn" type="submit" value="Delete"/>
+            </form></li>
+        </ul>
         </div>
             <% }) %>
+
+        <div class="itinerary-layout">
+            <ul>
+                <li>day 1</li>
+                <li>day 2</li>
+                <li>day 3</li>
+            </ul> 
+        </div>
+</main>
 </body>
+<script>
+    let addActivity = document.querySelector('.activity-container')
+    let itineraryArray = []
+
+
+// function addToItinerary() {
+    addActivity.addEventListener("click", (e) => {
+        e.preventDefault();
+        let addToArray = e.target.childNodes
+        itineraryArray.push(addToArray)
+        console.log(itineraryArray)
+    })
+// };
+
+</script>

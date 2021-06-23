@@ -1,26 +1,42 @@
 <body>
-    <ul>
-        <li><a href='/tokyo'>all</a></li>
-        <li><a href='/tokyo/food'>food</a></li>
-        <li><a href='/tokyo/lifestyle'>lifestyle</a></li>
-        <li><a href='/tokyo/entertainment'>entertainment</a></li>
-        <li><a href='/tokyo/culture'>culture</a></li>
-        <li><a href='/tokyo/shopping'>shopping</a></li>
+    <main>
+    <ul class="filter-bar">
+        <li><p>filter by:</p></li>
+        <li><a href='/tokyo' class="filter-list-item">all</a></li>
+        <li><a href='/tokyo/category/food' class="filter-list-item">food</a></li>
+        <li><a href='/tokyo/category/lifestyle' class="filter-list-item">lifestyle</a></li>
+        <li><a href='/tokyo/category/entertainment' class="filter-list-item">entertainment</a></li>
+        <li><a href='/tokyo/category/culture' class="filter-list-item">culture</a></li>
+        <li><a href='/tokyo/category/shopping' class="filter-list-item">shopping</a></li>
      </ul>
         <div class="activity-container">
-            <h3 class="labels"><%= details.title %></h3>
-            <p class="labels" class="details"><%= details.category%></p>
-            <p><%= details.price %></p>
-            <a href="<% details.googleMap %>"" >MAPS ICON</a>
-            <p>Address: <%= details.address %></p>
-            <p>Website: <%= details.website %></p>
-            <p>Approximate Time for Activity: <%= details.time %></p>
-
+            <h2 class="text-body" id="title"><%= details.title %></h2>
+            <p class="text-body" id="price"><%= details.price %></p>
+            <p class="text-body" id="address"><%= details.address %></p>
+            <a href="<%= details.googleMap %>" class="text-body" id="google-map" >View on Google Maps ></a>
+            <p class="text-body" id="time">
+            <span class="labels">Approximate Time for Activity:</span>
+                <%= details.time %>
+            </p>
+            <p class="text-body" id="category">
+                <span class="labels">Category:</span><br>
+                <%= details.category %></p>
+            <p class="text-body" id="website">
+                <span class="labels">Website:</span><br>
+                <%= details.website %>
+            </p>
+            <p class="text-body" id="english">
+                <span class="labels">English?</span><br>
+                <%= details.english %>
+            </p>
+            <p class="text-body" id="website">
+                <span class="labels">Kacie's Tips:</span><br>
+                <%= details.description %>
+            </p>
             <ul class= "activity-controls">
-                <li><a href="/tokyo/">Cancel</a></li>
-                <li><a href="/tokyo/####">Add to Itinerary</a></li>
+                <li><a href="/tokyo/" class="activity-btn" id="back-btn">Back</a></li>
+                <li><a href="/tokyo/####"  class="activity-btn" id="add-btn">Add to Itinerary</a></li>
             </ul>
-            </div>
-    
-    </div>
+        </div>x
+    </main>
 </body>

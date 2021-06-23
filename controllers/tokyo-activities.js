@@ -12,8 +12,6 @@ router.get('/', (req, res, next) => {
     .catch(next)
 })
 
-
-//****** HAVING TROUBLE WITH THE TWO GET ROUTES BELOW - ORDER DETERMINES WHICH ONE WORKS ******** //
 //Find by ID - view more of an activity
 router.get('/:id', (req, res, next) =>{
     TokyoActivity.findById({_id:req.params.id})
@@ -25,7 +23,7 @@ router.get('/:id', (req, res, next) =>{
 })
 
 //Find by Categories
-router.get('/:category', (req, res, next) => {
+router.get('/category/:category', (req, res, next) => {
     // res.send("hit")
     TokyoActivity.find({category: req.params.category})
     .then(activities => {
@@ -37,19 +35,17 @@ router.get('/:category', (req, res, next) => {
 })
 
 
-
-
-// //CRUD routes
-// //CREATE - create their own activity
-// router.post('/', (req, res, next) => {
-//     // res.send(req.body);
-//     TokyoActivity.create(req.body)
-//     .then(activities => {
-//         console.log(activities)
-//         res.redirect('/tokyo')
-//     })
-//     .catch(next)
-// })
+//CRUD routes
+//CREATE - create their own activity
+router.post('/', (req, res, next) => {
+    // res.send(req.body);
+    TokyoActivity.create(req.body)
+    .then(activities => {
+        console.log(activities)
+        res.redirect('/tokyo')
+    })
+    .catch(next)
+})
 
 // //UPDATE
 // router.put('/edit/:id', (req, res, next) => {
