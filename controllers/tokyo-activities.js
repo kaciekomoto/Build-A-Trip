@@ -35,17 +35,17 @@ router.get('/category/:category', (req, res, next) => {
 })
 
 
-//CRUD routes
-//CREATE - create their own activity
-router.post('/', (req, res, next) => {
-    // res.send(req.body);
-    TokyoActivity.create(req.body)
-    .then(activities => {
-        console.log(activities)
-        res.redirect('/tokyo')
-    })
-    .catch(next)
-})
+// //CRUD routes
+// //CREATE - create their own activity
+// router.post('/', (req, res, next) => {
+//     // res.send(req.body);
+//     TokyoActivity.create(req.body)
+//     .then(activities => {
+//         console.log(activities)
+//         res.redirect('/tokyo')
+//     })
+//     .catch(next)
+// })
 
 // //UPDATE
 // router.put('/edit/:id', (req, res, next) => {

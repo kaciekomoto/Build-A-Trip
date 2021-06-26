@@ -10,9 +10,6 @@ const UserActivitySchema = new mongoose.Schema({
     googleMap: String,
     website: String,
     notes: String,
-    time: String,
-    english: String,
-    price: String
 })
 
 module.exports = mongoose.model('UserActivity', UserActivitySchema)

@@ -1,0 +1,15 @@
+
+<main>
+    <div class="view-form">
+        <p class="itinerary-text">Title:</p>
+        <h2 class="itinerary-text" id="title"><%= data.title %></h2>
+        <p class="itinerary-text">Notes:</p>
+        <div class="notes-div">
+            <div id="notes-textbox"><%= data.notes %></div>
+        </div>
+    </div>
+    <div class="user-show-btns">
+        <a href="/users/edit/<%= data.id %>/" class="user-show-btn" id="edit-btn">Edit</a>
+        <a href="/users" class="user-show-btn" id="back-to-btn">Back to Itinerary</a>
+    </div>
+</main>

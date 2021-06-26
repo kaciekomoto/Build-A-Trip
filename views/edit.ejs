@@ -1,3 +1,5 @@
+
+  <main>
 <h2>Edit Activity:</h2>
 
   <form action="/users/<%= data.id %>?_method=put" method="POST">
@@ -38,6 +40,9 @@
       <label for="price" class="labels">Price:</label>
       <input type="text" id="price" name="price" value="<%=data.price%>">
     </div>  
-      <input type="submit" value="Update">
+      <input class="new-edit-form-btns" type="submit" value="Update">
   </form>
-      <a href="/users">Cancel</a>
+      <a href="/users" id="cancel-btn">Cancel</a>
+
+          
+  </main>

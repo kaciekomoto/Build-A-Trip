@@ -10,11 +10,11 @@ const tokyoController = require('./controllers/tokyo-activities')
 const userController = require('./controllers/user-activities')
 
 //Initialize and Configure
+app.use(cors())
 app.set('view engine', 'ejs');
 app.use(ejsLayouts)
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.use(cors())
 app.use(methodOverride('_method'))
 // app.use(session({
 //   store: new MongoStore({mongooseConnection: mongoose.connection}),

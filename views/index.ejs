@@ -1,4 +1,4 @@
-<body>
+
     <main>
     <ul class="filter-bar">
         <li><p>filter by:</p></li>
@@ -10,7 +10,7 @@
         <li><a href='/tokyo/category/shopping' class="filter-list-item">shopping</a></li>
      </ul>
      <% data.forEach(details => { %>
-        <div class="activity-container">
+        <div class="activity-container" id="<%= details.title %>">
             <div class="title-price-container">
                 <h2 class="text-body" id="title"><%= details.title %></h2>
                 <p class="text-body" id="price"><%= details.price %></p>
@@ -20,14 +20,15 @@
                 <a href="<%= details.googleMap %>" class="text-body" id="google-map" >View on Google Maps ></a>
             </div>
                 <p class="text-body" id="time">
-                <span class="labels">Approximate Time for Activity:</span>
+                <span class="labels">Duration:</span>
                 <%= details.time %>
             </p>
             <ul class= "activity-controls">
                 <li><a href="/tokyo/<%= details.id %>" class="activity-btn" id="read-more-btn">Read More</a></li>
-                <li><a href="/tokyo/####" class="activity-btn" id="add-btn">Add to Itinerary</a></li>
+                <li><a href="/users/" class="activity-btn add-btn" data-title="<%= details.title %>">Add to Itinerary</a></li>
             </ul>
         </div>
             <% }) %>
     </main>
-</body>
+
+

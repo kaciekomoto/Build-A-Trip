@@ -112,12 +112,13 @@ p {
     margin: 0;
 }
 .title-price-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+#price{
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .location-container {
@@ -157,19 +158,176 @@ p {
 
 
 /* "My Itinerary" page formatting*/
+#itinerary-page{
+    display: flex;
+    flex-direction: column;
+}
+
 #create-btn {
-    background: #3498db;
+    background: #0077DD;
     border-radius: 15px;
     font-family: Arial;
     color: #ffffff;
     font-size: 16px;
     padding: 10px;
-    margin-left: 20px;
+    margin-right: 20px;
     text-decoration: none;
+    width: 10rem;
     transition: color 0.3s ease-out;
   }
   
-  .btn:hover {
+  #create-btn:hover {
     background: #3cb0fd;
     text-decoration: none;
+  }
+
+  #itinerary-header{
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .itinerary-layout{
+    border-radius: 15px;
+    background-color: #ffffff;
+    width: 60%;
+    margin: 20px auto;
+  }
+  .itinerary-activity-container {
+    padding: 10px 0px 10px 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid #cfd1d8;
+  }
+
+  #itinerary-title{
+    margin-left: 30px;
+  }
+
+  .itinerary-btns-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 30px;
+    list-style: none;
+  }
+
+  .itinerary-btn {
+    text-decoration: none;
+    padding: 0px 20px 0px 20px;
+    margin-right: 15px;
+    color: #3498db;
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  .itinerary-btn:hover {
+    text-decoration: underline;
+  }
+
+  #delete-btn {
+    border: 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #3498db;
+    border-radius: 10px;
+    background-color: #ffffff;  
+}
+
+input[type=submit]:hover{
+    text-decoration:underline;
+}
+
+
+/* New View ("/users/new") */
+.new-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type=text], select {
+    margin: 0 0 1em 0;
+    width: 500px;
+    padding: 10px 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #cfd1d8;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[class=new-edit-form-btns] {
+    width: 300px;
+    background-color: #0077DD;
+    color: #ffffff;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[class=new-edit-form-btns]:hover {
+    background-color: #3498db;
+  }
+  
+  input[id="notes"] {
+    padding: 50px 50px;
+  }
+  .new-form-btns{
+    display:flex;
+    flex-direction: row;
+    width: 300px;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+  #cancel-btn {
+    width: 300px;
+    background-color: #0077DD;
+    color: #ffffff;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #cancel-btn:hover {
+    background: #3cb0fd;
+    text-decoration: underline;
+  }
+
+  /* User Activity Show View ("/users/:id") */
+  .user-show-btn {
+    width: 300px;
+    background-color: #0077DD;
+    color: #ffffff;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .user-show-btn:hover {
+    background-color: #3498db;
+  }
+
+  .notes-div{
+    width: 60%;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  .user-show-btns{
+    margin: 20px auto;
   }

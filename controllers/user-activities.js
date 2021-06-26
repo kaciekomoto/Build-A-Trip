@@ -7,27 +7,11 @@ const UserActivity = require('../models/user-activities')
 //HOME - view all acitivities
 router.get('/', (req, res, next) => {
     UserActivity.find({})
-    // UserActivity.find(function(){
-    //     let addActivity = document.querySelector('.activity-container')
-    //     let itineraryArray = []
-    //     addActivity.addEventListener("click", (e) => {
-    //         e.preventDefault();
-    //         let addToArray = e.target.childNodes
-    //         itineraryArray.push(addToArray)
-    //         console.log(itineraryArray)
-    //     })
-    // })
     .then(activities => {
-        res.render('../views/users/user-index', {data: activities})
+        res.render('user-index', {data: activities})
     })
     .catch(next)
 })
-
-// //Itinerary
-// router.get('/itinerary', function(req, res, next) {
-//     let activityId 
-// })
-
 
 //NEW route
 router.get('/new', (req, res, next) => {
@@ -39,7 +23,7 @@ router.get('/:id', (req, res, next) =>{
     UserActivity.findById({_id:req.params.id})
     .then(activities => {
         console.log(activities)
-        res.render('../views/users/user-show', {data: activities})
+        res.render('user-show', {data: activities})
     })
     .catch(next)
 })
@@ -73,7 +57,7 @@ router.put('/:id', (req, res, next) => {
         {new:true}
     )
     .then(activities => {
-        res.render('../views/users/user-show',{data: activities})
+        res.render('user-show',{data: activities})
     })
     .catch(next)
 })
