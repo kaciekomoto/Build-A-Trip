@@ -13,13 +13,13 @@ app.use(ejsLayouts)
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
-// app.use(session({
-//   store: new MongoStore({mongooseConnection: mongoose.connection}),
-//   cookie: {maxAge: 180 * 60 * 1000}
-// }))
+
 
 //Set up Static files (i.e. for CSS)
 app.use(express.static(__dirname + "/public"))
+app.get('/',(req, res) => {
+  res.redirect('/tokyo')
+})
 
 //CONTROLLERS
 app.use('/tokyo', tokyoController)
