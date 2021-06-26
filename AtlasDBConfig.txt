@@ -1,0 +1,1 @@
+heroku config:set DB_URL="mongodb+srv://kkomoto:MpHeGv8$cyYA$_K@cluster0.vqazq.mongodb.net/deployBuild-A-Trip?retryWrites=true&w=majority"
