@@ -1,41 +1,32 @@
 
     <main>
-    <ul class="filter-bar">
-        <li><p>filter by:</p></li>
-        <li><a href='/tokyo' class="filter-list-item">all</a></li>
-        <li><a href='/tokyo/category/food' class="filter-list-item">food</a></li>
-        <li><a href='/tokyo/category/lifestyle' class="filter-list-item">lifestyle</a></li>
-        <li><a href='/tokyo/category/entertainment' class="filter-list-item">entertainment</a></li>
-        <li><a href='/tokyo/category/culture' class="filter-list-item">culture</a></li>
-        <li><a href='/tokyo/category/shopping' class="filter-list-item">shopping</a></li>
-     </ul>
-        <div class="activity-container">
-            <h2 class="text-body" id="title"><%= details.title %></h2>
-            <p class="text-body" id="price"><%= details.price %></p>
-            <p class="text-body" id="address"><%= details.address %></p>
-            <a href="<%= details.googleMap %>" class="text-body" id="google-map" >View on Google Maps ></a>
-            <p class="text-body" id="time">
-            <span class="labels">Approximate Time for Activity:</span>
+        
+        <div class="show-activity-container">
+            <div class="title-price-location-cat-container" id="view-upper-text">
+                <h2 class="text-body" id="title"><%= details.title %></h2>
+                <div class="price-genLocation-cat-container">
+                    <p class="text-body" id="price"><%= details.price %> •</p>
+                    <p class="text-body" id="category"><%= details.category %> • </p>
+                    <p class="text-body" id="genLocation"><%= details.genLocation %></p>
+                </div>
+            </div>
+            <p class="view-text" id="address"><%= details.address %></p>
+            <p class="view-text" id="time">
+                <span class="labels">Duration:</span>
                 <%= details.time %>
             </p>
-            <p class="text-body" id="category">
-                <span class="labels">Category:</span><br>
-                <%= details.category %></p>
-            <p class="text-body" id="website">
+            <p class="view-text" id="website">
                 <span class="labels">Website:</span><br>
                 <%= details.website %>
             </p>
-            <p class="text-body" id="english">
+            <p class="view-text" id="english">
                 <span class="labels">English?</span><br>
                 <%= details.english %>
             </p>
-            <p class="text-body" id="website">
+            <p class="view-text" id="website">
                 <span class="labels">Kacie's Tips:</span><br>
                 <%= details.description %>
             </p>
-            <ul class= "activity-controls">
-                <li><a href="/tokyo/" class="activity-btn" id="back-btn">Back</a></li>
-                <li><a href="/tokyo/"  class="activity-btn" id="add-btn">Add to Itinerary</a></li>
-            </ul>
+            <a href="/tokyo/" class="activity-btn" id="back-btn">Back</a>
         </div>
     </main>

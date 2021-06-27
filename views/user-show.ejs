@@ -1,15 +1,26 @@
 
 <main>
-    <div class="view-form">
-        <p class="itinerary-text">Title:</p>
-        <h2 class="itinerary-text" id="title"><%= data.title %></h2>
-        <p class="itinerary-text">Notes:</p>
-        <div class="notes-div">
-            <div id="notes-textbox"><%= data.notes %></div>
+    <div class="user-show">
+        <div class="user-show-act-container">
+        <div class="title-price-location-cat-container" id="view-upper-text">
+            <h2 class="text-body" id="title"><%= data.title %></h2>
         </div>
-    </div>
-    <div class="user-show-btns">
-        <a href="/users/edit/<%= data.id %>/" class="user-show-btn" id="edit-btn">Edit</a>
-        <a href="/users" class="user-show-btn" id="back-to-btn">Back to Itinerary</a>
+        <p class="view-text" id="address">
+            <span class="labels">Address:</span><br>
+            <%= data.address %>
+        </p>
+        <p class="view-text" id="website">
+            <span class="labels">Website:</span><br>
+            <%= data.website %>
+        </p>
+        <p class="view-text" id="notes-textbox">
+            <span class="labels">Notes:</span><br>
+            <%= data.notes %>
+        </p>
+        </div>
+        <div class="user-show-btns">
+            <a href="/users" class="user-show-btn" id="back-to-btn">Back to Itinerary</a>
+            <a href="/users/edit/<%= data.id %>/" class="user-show-btn" id="edit-btn">Edit</a>
+        </div>
     </div>
 </main>

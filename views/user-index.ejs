@@ -2,9 +2,9 @@
  <main id="itinerary-page">
     <a href='/users/new'><span id="create-btn">+ Add Custom Activity</span></a>
     <div class="itinerary-layout">
-        <h1 id="itinerary-header">Itinerary</h1>
+        <h1 id="itinerary-header">Itinerary List:</h1>
     <% data.forEach(details => { %>
-        <div class="itinerary-activity-container">
+        <div class="itinerary-activity-container" ondrop="dropActivity(e)" ondragover="canDrop(e)">
         <h2 class="itinerary-text" id="itinerary-title"><%= details.title %></h2>
        <ul class= "itinerary-btns-group">
             <li><a href="/users/<%= details.id %>" class="itinerary-btn" id="read-more-btn">Read More</a></li>
@@ -17,4 +17,19 @@
             </ul> 
         </div>
 </main>
+<script>
+    function canDrop(e) {
+      e.preventDefault();
+    }
+    
+    function dragActivity(e) {
+      e.dataTransfer.setData("text", e.target.id);
+    }
+    
+    function dropActivity(e) {
+      e.preventDefault();
+      let moveActivity = e.dataTransfer.getData("text");
+      e.target.appendChild(document.getElementById(moveActivity));
+    }
+</script>
 

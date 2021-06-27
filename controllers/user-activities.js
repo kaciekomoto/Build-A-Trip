@@ -53,7 +53,10 @@ router.put('/:id', (req, res, next) => {
     console.log(req.body)
     UserActivity.findOneAndUpdate(
         {_id: req.params.id},
-        {title:req.body.title},
+        {title:req.body.title,
+        website:req.body.website,
+        address:req.body.address,
+        notes: req.body.notes},
         {new:true}
     )
     .then(activities => {

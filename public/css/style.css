@@ -31,6 +31,7 @@ p {
 
 .labels {
     font-weight: 600;
+    
 }
 
 
@@ -80,6 +81,38 @@ p {
     color: #3498db;
 }
 
+/* Partials - Footer Formatting*/
+/*#openmap {}*/
+#map-modal{
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#modal-footer{
+  background-color: white;
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+  margin: 150px auto;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 2%;
+  line-height: 120%;
+}
+
+#map-close-btn{
+  background: #0077DD;
+  border-radius: 15px;
+  font-family: Arial;
+  color: #ffffff;
+}
+
 
 /* Index ("Browse Recommendations") page formatting*/
 .filter-bar {
@@ -111,14 +144,34 @@ p {
     padding: 0rem 2rem;
     margin: 0;
 }
-.title-price-container{
+.title-price-location-cat-container{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
+.price-genLocation-cat-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 #price{
     padding-top: 0.5rem;
+    padding-right: 0rem;
     font-size: 0.8rem;
+}
+
+#category{
+  padding-top: 0.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0rem;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+} 
+#genLocation{
+  padding-top: 0.5rem;
+  padding-left: 0.3rem;
+  font-size: 0.85rem;
 }
 
 .location-container {
@@ -154,8 +207,30 @@ p {
 }
 
 /* Show View ("/tokyo/:id") */
+.show-activity-container {
+  border-radius: 15px;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 20px auto;
+}
 
+#view-upper-text{
+  padding-bottom: 1rem;
+}
 
+.view-text {
+  padding: 1rem 2rem;
+  margin: 0;
+}
+
+#back-btn{
+  padding: 20px 0px 0px 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: 1px solid #cfd1d8;
+}
 
 /* "My Itinerary" page formatting*/
 #itinerary-page{
@@ -250,7 +325,7 @@ input[type=submit]:hover{
 
 input[type=text], select {
     margin: 0 0 1em 0;
-    width: 500px;
+    width: 800px;
     padding: 10px 10px;
     margin: 10px 0;
     display: inline-block;
@@ -259,24 +334,26 @@ input[type=text], select {
     box-sizing: border-box;
   }
   
-  input[class=new-edit-form-btns] {
-    width: 300px;
+  input[class=submit-btns] {
+    width: 250px;
     background-color: #0077DD;
     color: #ffffff;
     padding: 10px 10px;
-    margin: 8px 0;
+    margin: 10px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
   }
   
-  input[class=new-edit-form-btns]:hover {
+  input[class=submit-btns]:hover {
     background-color: #3498db;
   }
   
   input[id="notes"] {
-    padding: 50px 50px;
+    height: 70px;
   }
+
   .new-form-btns{
     display:flex;
     flex-direction: row;
@@ -289,8 +366,8 @@ input[type=text], select {
     text-decoration: none;
 }
   #cancel-btn {
-    width: 300px;
-    background-color: #0077DD;
+    width: 250px;
+    background-color: #d52e2e;
     color: #ffffff;
     padding: 10px 10px;
     margin: 10px 10px;
@@ -298,17 +375,35 @@ input[type=text], select {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
+    font-size: 1em;
   }
   
   #cancel-btn:hover {
-    background: #3cb0fd;
+    background: #fd3c3c;
     text-decoration: underline;
   }
 
   /* User Activity Show View ("/users/:id") */
+  .user-show{
+    width: 80%;
+    margin: 20px auto;
+  }
+  .user-show-act-container {
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin: 20px auto;
+  }
+
+  .user-show-btns{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+  }
+
   .user-show-btn {
-    width: 300px;
-    background-color: #0077DD;
+    width: 150px;
+    text-align: center;
     color: #ffffff;
     padding: 10px 10px;
     margin: 10px 10px;
@@ -319,15 +414,39 @@ input[type=text], select {
   }
   
   .user-show-btn:hover {
+    text-decoration: underline;
+  }
+  #back-to-btn{
+    background-color: #505050;
+  }
+  #back-to-btn:hover{
+    background-color: #5e5e5e;
+  }
+  #edit-btn{
+    background-color: #0077DD;
+  }
+  #edit-btn:hover{
     background-color: #3498db;
   }
 
-  .notes-div{
-    width: 60%;
-    height: 300px;
-    background-color: #ffffff;
-    border-radius: 10px;
-  }
-  .user-show-btns{
-    margin: 20px auto;
-  }
+  #notes-textbox{
+  height: 200px;
+  padding-bottom: 1rem;
+}
+
+
+/* User Activity Edit View ("/users/edit/:id") */
+.edit-btns{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 300px;
+  padding-top: 10px;
+  padding-right: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+} 
+
+

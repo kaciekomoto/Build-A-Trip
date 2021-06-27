@@ -4,6 +4,7 @@ const TokyoActivitySchema = new mongoose.Schema(
     {
         title: String,
         category: String,
+        genLocation: String,
         address: String,
         googleMap: String,
         website: String,

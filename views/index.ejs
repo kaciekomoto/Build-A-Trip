@@ -8,21 +8,28 @@
         <li><a href='/tokyo/category/entertainment' class="filter-list-item">entertainment</a></li>
         <li><a href='/tokyo/category/culture' class="filter-list-item">culture</a></li>
         <li><a href='/tokyo/category/shopping' class="filter-list-item">shopping</a></li>
+        <li><a href='/tokyo/category/nightlife' class="filter-list-item">nightlife</a></li>
      </ul>
      <% data.forEach(details => { %>
         <div class="activity-container" id="<%= details.title %>">
-            <div class="title-price-container">
+            <div class="title-price-location-cat-container">
                 <h2 class="text-body" id="title"><%= details.title %></h2>
-                <p class="text-body" id="price"><%= details.price %></p>
+                <div class="price-genLocation-cat-container">
+                    <p class="text-body" id="price"><%= details.price %> •</p>
+                    <p class="text-body" id="category"><%= details.category %> • </p>
+                    <p class="text-body" id="genLocation"><%= details.genLocation %></p>
+                </div>
             </div>
             <div class="location-container">
-                <p class="text-body" id="address"><%= details.address %></p>
-                <a href="<%= details.googleMap %>" class="text-body" id="google-map" >View on Google Maps ></a>
+                <p class="text-body" id="address">
+                    <img src="../public/img/Kacies_Tips_Icons.jpg" alt="'Kacies Tips' Icon">
+                    <%= details.description %>
+                </p>
             </div>
                 <p class="text-body" id="time">
                 <span class="labels">Duration:</span>
                 <%= details.time %>
-            </p>
+                </p>
             <ul class= "activity-controls">
                 <li><a href="/tokyo/<%= details.id %>" class="activity-btn" id="read-more-btn">Read More</a></li>
                 <li><a href="/users/" class="activity-btn add-btn" data-title="<%= details.title %>">Add to Itinerary</a></li>

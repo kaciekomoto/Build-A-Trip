@@ -1,48 +1,31 @@
 
-  <main>
-<h2>Edit Activity:</h2>
+<main>
 
+  <div class="new-form">
+  <h1 id="new-header">Edit Activity:</h1>
   <form action="/users/<%= data.id %>?_method=put" method="POST">
-
     <div>
-      <label for="title" class="labels">Title:</label>
+      <label for="title" class="labels">Title:</label><br>
       <input type="text" id="title" name="title" value="<%=data.title%>">
     </div>
     <div>
-      <label for="category" class="labels">Category:</label>
-      <input type="text" id="category" name="category" value="<%=data.category%>">
-    </div>
-    <div>
-      <label for="address" class="labels">Address:</label>
-      <input type="text" id="address" name="address" value="<%=data.address%>">
-    </div>
-    <div>
-      <label for="map" class="labels">google map link:</label>
-      <input type="text" id="map" name="googleMap" value="<%=data.map%>">
-    </div>
-    <div>
-      <label for="website" class="labels">Website link:</label>
+      <label for="website" class="labels">Website link:</label><br>
       <input type="text" id="website" name="website" value="<%=data.website%>">
     </div>
     <div>
-      <label for="description" class="labels" id="user-notes">Notes:</label>
-      <input type="text" id="description" name="description" value="<%=data.description%>">
+      <label for="address" class="labels">Address:</label><br>
+      <input type="text" id="address" name="address" value="<%=data.address%>">
     </div>
     <div>
-      <label for="time" class="labels">Approximate time:</label>
-      <input type="text" id="time" name="time" value="<%=data.time%>">
+      <label for="notes" class="labels" id="user-notes">Notes:</label><br>
+      <input type="text" id="notes" name="notes" value="<%=data.notes%>">
     </div>
-    <div>
-      <label for="english" class="labels">English:</label>
-      <input type="text" id="english" name="english" value="<%=data.english%>">
-    </div>    
-    <div>
-      <label for="price" class="labels">Price:</label>
-      <input type="text" id="price" name="price" value="<%=data.price%>">
-    </div>  
-      <input class="new-edit-form-btns" type="submit" value="Update">
-  </form>
+    <div class="edit-btns">
       <a href="/users" id="cancel-btn">Cancel</a>
+      <input class="submit-btns" type="submit" value="Update"/>
+    </div>
 
-          
+  </form>
+</div>
+
   </main>
