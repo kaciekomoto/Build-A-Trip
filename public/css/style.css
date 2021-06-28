@@ -14,9 +14,12 @@ html {
 body{
     background-color: #EBECF0;
     font-family: "Roboto", Arial, sans-serif;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 main {
-    margin-top: 80px;
+    margin: 60px 0px 0px 0px;
     padding-bottom: 2rem;
     min-height: 600px;
 }
@@ -33,9 +36,7 @@ p {
 
 .labels {
     font-weight: 600;
-    
 }
-
 
 /* Partials - Header Formatting */
 .nav-bar{
@@ -94,6 +95,11 @@ footer {
 
 
 /* Index ("Browse Recommendations") page formatting*/
+.hero-pic{
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
 .filter-bar {
     list-style: none;
     display: flex;
