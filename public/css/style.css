@@ -95,10 +95,28 @@ footer {
 
 
 /* Index ("Browse Recommendations") page formatting*/
+.hero-box{
+  position: relative;
+  text-align: center;
+  background-color: black;
+}
+
 .hero-pic{
   max-width: 100%;
   height: auto;
-  opacity: 0.8;
+  opacity: 0.4;
+}
+#hero-text{
+  text-transform: uppercase;
+  text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+  font-size: 5em;
+  color: #EBECF0;
+  letter-spacing: 20px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 30%;
 }
 .filter-bar {
     list-style: none;
