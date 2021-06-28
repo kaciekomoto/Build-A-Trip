@@ -223,7 +223,7 @@ footer {
   border-radius: 15px;
   background-color: #ffffff;
   width: 80%;
-  margin: 20px auto;
+  margin: 100px auto;
 }
 
 #view-upper-text{
@@ -259,7 +259,7 @@ footer {
     padding: 15px;
     margin-bottom: 2rem;
     margin-right: 20px;
-    margin: 1rem 0.5rem 2rem 0rem;
+    margin: 2rem 2rem 2rem 0rem;
     text-decoration: none;
     width: 10rem;
     transition: color 0.3s ease-out;
@@ -334,6 +334,7 @@ input[type=submit]:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 100px;
 }
 
 input[type=text], select {
@@ -398,9 +399,9 @@ input[type=text], select {
   }
 
   /* User Activity Show View ("/users/:id") */
-  .user-show{
+  .user-show {
     width: 80%;
-    margin: 20px auto;
+    margin: 100px auto;
   }
   .user-show-act-container {
     border-radius: 15px;
