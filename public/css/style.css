@@ -16,7 +16,9 @@ body{
     font-family: "Roboto", Arial, sans-serif;
 }
 main {
-    margin-top: 100px;
+    margin-top: 80px;
+    padding-bottom: 2rem;
+    min-height: 600px;
 }
 
 h2{
@@ -82,35 +84,12 @@ p {
 }
 
 /* Partials - Footer Formatting*/
-/*#openmap {}*/
-#map-modal{
-  background-color: rgba(0,0,0,0.4);
-  position: fixed;
+footer {
+  border: none;
+  height: 30px;
+  margin: 0px;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  overflow: auto;
-  display: none;
-}
-
-#modal-footer{
-  background-color: white;
-	height: 350px;
-	width: 550px;
-	border-radius: 2px;
-  margin: 150px auto;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  padding: 2%;
-  line-height: 120%;
-}
-
-#map-close-btn{
-  background: #0077DD;
-  border-radius: 15px;
-  font-family: Arial;
-  color: #ffffff;
 }
 
 
@@ -121,7 +100,7 @@ p {
     justify-content:space-between;
     align-items: center;
     margin: 20px 10px;
-    width: 60%
+    width: 80%
   }
 
 .filter-list-item {
@@ -146,7 +125,7 @@ p {
 }
 .title-price-location-cat-container{
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .price-genLocation-cat-container{
@@ -158,7 +137,7 @@ p {
 #price{
     padding-top: 0.5rem;
     padding-right: 0rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
 #category{
@@ -171,11 +150,18 @@ p {
 #genLocation{
   padding-top: 0.5rem;
   padding-left: 0.3rem;
+  padding-right: 0rem;
+  font-size: 0.85rem;
+}
+#time {
+  padding-top: 0.5rem;
+  padding-left: 0.3rem;
   font-size: 0.85rem;
 }
 
 .tips-container {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 0.8rem;
     display: flex;
     flex-direction: row;
 }
@@ -207,7 +193,6 @@ p {
   height: 40px;
   padding-right: 0;
 }
-
 
 /* Show View ("/tokyo/:id") */
 .show-activity-container {
@@ -243,12 +228,14 @@ p {
 
 #create-btn {
     background: #0077DD;
-    border-radius: 15px;
-    font-family: Arial;
+    float: right;
+    border-radius: 25px;
     color: #ffffff;
     font-size: 16px;
-    padding: 10px;
+    padding: 15px;
+    margin-bottom: 2rem;
     margin-right: 20px;
+    margin: 1rem 0.5rem 2rem 0rem;
     text-decoration: none;
     width: 10rem;
     transition: color 0.3s ease-out;
@@ -256,7 +243,6 @@ p {
   
   #create-btn:hover {
     background: #3cb0fd;
-    text-decoration: none;
   }
 
   #itinerary-header{

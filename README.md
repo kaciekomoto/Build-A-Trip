@@ -18,9 +18,9 @@ After living in Tokyo for 3 years, I often get asked for recommendations on what
 - EJS
 
 ## Wireframes
-<img src="img/browse activities.png">
-<img src="img/your itinerary.png">
-<img src="img/create-form-pg.png">
+<img src="/img/browse activities.png">
+<img src="/img/your itinerary.png">
+<img src="/img/create-form-pg.png">
 
 ### Major Hurdles
 #### 1. Organizing JSON data in consistent format
