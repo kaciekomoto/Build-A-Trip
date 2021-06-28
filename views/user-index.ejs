@@ -17,19 +17,4 @@
             </ul> 
         </div>
 </main>
-<script>
-    function canDrop(e) {
-      e.preventDefault();
-    }
-    
-    function dragActivity(e) {
-      e.dataTransfer.setData("text", e.target.id);
-    }
-    
-    function dropActivity(e) {
-      e.preventDefault();
-      let moveActivity = e.dataTransfer.getData("text");
-      e.target.appendChild(document.getElementById(moveActivity));
-    }
-</script>
 

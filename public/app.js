@@ -1,5 +1,4 @@
 let addActivity = document.querySelectorAll('.add-btn')
-// let actContainer = document.querySelectorAll('.activity-container')
 
 addActivity.forEach(addButton => {
     addButton.addEventListener("click", (e) => {
@@ -9,7 +8,7 @@ addActivity.forEach(addButton => {
         let activityData = e.target.dataset.title
         //fetch and post new user activity and carry over data (may have to use parent/sibling)
         console.log(activityData)
-        let url = 'http://localhost:3000/users'
+        let url = 'https://build-a-trip.herokuapp.com/users'
         fetch(url, {
             method: 'POST',
             headers:{
@@ -23,11 +22,6 @@ addActivity.forEach(addButton => {
             .then(res => {
                 console.log(res.json())
                 return res.json()
-                // if (res.ok) {
-                //     console.log('SUCCESS')
-                // } else {  
-                //     console.log('not successful')
-                // }
             })
             .then(data => {
                 console.log(data)
@@ -38,27 +32,42 @@ addActivity.forEach(addButton => {
 })
 
 
-//View Map Event Listener
-const openBtn = document.getElementById('openMap');
+// //View Map Event Listener
+// const openBtn = document.getElementById('openMap');
 
-// Grabbing modal element
-const mapModal = document.getElementById('map-modal')
+// // Grabbing modal element
+// const mapModal = document.getElementById('map-modal')
 
-// Grabbing close button
-const closeBtn = document.getElementById('map-close-btn')
+// // Grabbing close button
+// const closeBtn = document.getElementById('map-close-btn')
 
-//Add event handler
-// Function to change modal display to 'block'
-const openMap = () => {
-    modal.style.display = 'block';
-  }
+// //Add event handler
+// // Function to change modal display to 'block'
+// const openMap = () => {
+//     modal.style.display = 'block';
+//   }
 
-// Event handler to close the modal
-  const closeMap = () => {
-    modal.style.display = 'none'
-  }
+// // Event handler to close the modal
+//   const closeMap = () => {
+//     modal.style.display = 'none'
+//   }
 
-//Add event listener to About the Game button
-openBtn.addEventListener('click', openMap)
-//Add event listener to Close button
-closeBtn.addEventListener('click', closeMap)
+// //Add event listener to About the Game button
+// openBtn.addEventListener('click', openMap)
+// //Add event listener to Close button
+// closeBtn.addEventListener('click', closeMap)
+
+
+    // function canDrop(e) {
+    //   e.preventDefault();
+    // }
+    
+    // function dragActivity(e) {
+    //   e.dataTransfer.setData("text", e.target.id);
+    // }
+    
+    // function dropActivity(e) {
+    //   e.preventDefault();
+    //   let moveActivity = e.dataTransfer.getData("text");
+    //   e.target.appendChild(document.getElementById(moveActivity));
+    // }

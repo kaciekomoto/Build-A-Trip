@@ -174,18 +174,14 @@ p {
   font-size: 0.85rem;
 }
 
-.location-container {
+.tips-container {
     padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
 }
 
-#google-map {
-    text-decoration: none;
-    color: #0077DD;
-    font-size: 0.8rem;
-}
-
-#google-map:hover{
-    text-decoration: underline;
+#tips {
+  padding-left: 10px;
 }
 
 .activity-controls {
@@ -206,6 +202,13 @@ p {
     text-decoration: underline;
 }
 
+#tips-icon {
+  width: 50px;
+  height: 40px;
+  padding-right: 0;
+}
+
+
 /* Show View ("/tokyo/:id") */
 .show-activity-container {
   border-radius: 15px;
@@ -224,7 +227,7 @@ p {
 }
 
 #back-btn{
-  padding: 20px 0px 0px 20px;
+  padding: 20px 0px 20px 0px;
   list-style: none;
   display: flex;
   flex-direction: row;
