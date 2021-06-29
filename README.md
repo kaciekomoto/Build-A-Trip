@@ -1,8 +1,9 @@
 # Build-A-Trip
-<img src="/public/img/BAT_deployed_browse.png">
 
 ## About Build-A-Trip
 For this project, I built a site where users can create an itinerary of things to do in Tokyo from my personal recommendations and from their own ideas too. I decided to build this app because, I lived in Tokyo for 3 years and often have friends ask for recommendations on what to do and where to eat. Now instead of sending a lengthy text, I can send them this link!
+
+<img src="/public/img/BAT_deployed_browse.png">
 
 #### Visit the Heroku Deploy: [Build-A-Trip](https://build-a-trip.herokuapp.com/tokyo)
 
@@ -22,7 +23,7 @@ For this project, I built a site where users can create an itinerary of things t
 <img src="/public/img/create-form-pg.png">
 
 
-### Major Hurdles
+## Major Hurdles
 #### 1. Organizing JSON data in consistent format
 When creating the API of recommendations, I had some difficulty organizing the data in one Schema format. For example, when it comes to "websites" some activities I suggest have one, some don't have one, and others have one but the informational website and ticket booking website are separate. 
 
