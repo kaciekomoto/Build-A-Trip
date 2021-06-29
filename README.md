@@ -44,7 +44,7 @@ My initial wireframes also included a lot of my stretch goals like building a "l
 1. Improve Media Responsiveness
 2. Make Itinerary page more like a Calendar
 3. Add images to recommended activities
-4. Drag and Drop featurs on the Itinerary
+4. Drag and Drop features on the Itinerary
 5. Add User Account and Login capabilities
 6. Add ability to like and share certain activities
 7. Improve UX/UI Elements and Usability Testing
