@@ -34,46 +34,4 @@ router.get('/category/:category', (req, res, next) => {
         .catch(next)
 })
 
-
-// //CRUD routes
-// //CREATE - create their own activity
-// router.post('/', (req, res, next) => {
-//     // res.send(req.body);
-//     TokyoActivity.create(req.body)
-//     .then(activities => {
-//         console.log(activities)
-//         res.redirect('/tokyo')
-//     })
-//     .catch(next)
-// })
-
-// //UPDATE
-// router.put('/edit/:id', (req, res, next) => {
-//     console.log(req.body)
-//     TokyoActivity.findOneAndUpdate(
-//         {_id: req.params.id},
-//         {title: req.params.title,
-//         category: req.params.category,
-//         address: req.params.address,
-//         website: req.params.website,
-//         time: req.params.time,
-//         price: req.params.price},
-//         {new:true}
-//     )
-//     .then(activities => {
-//         res.render('show',{data: activities})
-//     })
-//     .catch(next)
-// })
-
-// //DELETE
-// router.delete('/:id', (req, res, next) => {
-//     TokyoActivity.findOneAndDelete({_id:req.params.id})
-//     .then(results => {
-//         console.log(`${results} was deleted`)
-//     })
-//     .catch(next)
-//     .then(res.redirect('/tokyo'))
-// })
-
 module.exports = router
