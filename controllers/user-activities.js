@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const UserActivity = require('../models/user-activities')
 
-
 //GET routes
 //HOME - view all acitivities
 router.get('/', (req, res, next) => {

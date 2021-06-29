@@ -3,7 +3,7 @@
 <img src="/public/img/BAT_deployed_browse.png">
 
 ## About Build-A-Trip
-For this project, I built a site where users can create an itinerary of things to do in Tokyo from my personal recommendations and from their own ideas too. I decided to build this app because, I lived in Tokyo for 3 years and often have friends ask for recommendations on what to do and where to eat. Now instead of sending a lengthy text, I can send them this link!
+For this project, I built a site where users can create an itinerary of things to do in Tokyo from my ptersonal recommendations and from their own ideas too. I decided to build this app because, I lived in Tokyo for 3 years and often have friends ask for recommendations on what to do and where to eat. Now instead of sending a lengthy text, I can send them this link!
 
 #### Visit the Heroku Deploy: [Build-A-Trip](https://build-a-trip.herokuapp.com/tokyo)
 
@@ -22,6 +22,13 @@ For this project, I built a site where users can create an itinerary of things t
 <img src="/public/img/your-itinerary.png"> 
 <img src="/public/img/create-form-pg.png">
 
+## User Stories
+- As the user, I want to the option to see all activities or filter by category so that I can sort the results by my interests
+- As the user, I want to be able to save my favorite activities so that I can quickly browse all the activities and then revisit the ones that seemed most interesting after
+- As the user, I want to be able to see brief overview of the activity before clicking it for more information so that I can decide whether or not it may interest me
+- As the user, I want to be able to add in my own custom activities so that I can add any activities that aren’t suggested
+- As the user, I want to be able to select and organize the activities I choose so that I can see how they fit into the schedule
+- As the user, I want to be able to share my schedule so that I can send it to whoever I’m traveling with
 
 ## Major Hurdles
 #### 1. Organizing JSON data in consistent format

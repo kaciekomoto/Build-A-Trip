@@ -1,32 +1,31 @@
 
-    <main>
-        
-        <div class="show-activity-container">
-            <div class="title-price-location-cat-container" id="view-upper-text">
-                <h2 class="text-body" id="title"><%= details.title %></h2>
-                <div class="price-genLocation-cat-container">
-                    <p class="text-body" id="price"><%= details.price %> •</p>
-                    <p class="text-body" id="category"><%= details.category %> •</p>
-                    <p class="text-body" id="genLocation"><%= details.genLocation %> •</p>
-                    <p class="text-body" id="time"><%= details.time %></p>
-                </div>
+<main>
+    <div class="show-activity-container">
+        <div class="title-price-location-cat-container" id="view-upper-text">
+            <h2 class="text-body" id="title"><%= details.title %></h2>
+            <div class="price-genLocation-cat-container">
+                <p class="text-body" id="price"><%= details.price %> •</p>
+                <p class="text-body" id="category"><%= details.category %> •</p>
+                <p class="text-body" id="genLocation"><%= details.genLocation %> •</p>
+                <p class="text-body" id="time"><%= details.time %></p>
             </div>
-            <p class="view-text" id="website">
-                <span class="labels">Address:</span><br>
-                <%= details.address %>
-            </p>
-            <p class="view-text" id="website">
-                <span class="labels">Website:</span><br>
-                <%= details.website %>
-            </p>
-            <p class="view-text" id="english">
-                <span class="labels">English?</span><br>
-                <%= details.english %>
-            </p>
-            <div class="tips-container">
-                <img class="text-body" id="tips-icon" src="/img/Kacies_Tips_Icons.png" alt="Kacies-Tips-Icon">
-                <p class="text-body" id="tips"><%= details.description %></p>
-            </div>
-            <a href="/tokyo/" class="activity-btn" id="back-btn">Back</a>
         </div>
-    </main>
+        <p class="view-text" id="website">
+            <span class="labels">Address:</span><br>
+            <%= details.address %>
+        </p>
+        <p class="view-text" id="website">
+            <span class="labels">Website:</span><br>
+            <%= details.website %>
+        </p>
+        <p class="view-text" id="english">
+            <span class="labels">English?</span><br>
+            <%= details.english %>
+        </p>
+        <div class="tips-container">
+            <img class="text-body" id="tips-icon" src="/img/Kacies_Tips_Icons.png" alt="Kacies-Tips-Icon">
+            <p class="text-body" id="tips"><%= details.description %></p>
+        </div>
+        <a href="/tokyo/" class="activity-btn" id="back-btn">Back</a>
+    </div>
+</main>

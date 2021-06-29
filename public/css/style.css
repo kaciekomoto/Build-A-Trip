@@ -448,7 +448,6 @@ input[type=text], select {
   padding-bottom: 1rem;
 }
 
-
 /* User Activity Edit View ("/users/edit/:id") */
 .edit-btns{
   display:flex;

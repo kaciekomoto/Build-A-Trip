@@ -1,8 +1,8 @@
 
 <main>
-
   <div class="new-form">
   <h1 id="new-header">Edit Activity:</h1>
+  
   <form action="/users/<%= data.id %>?_method=put" method="POST">
     <div>
       <label for="title" class="labels">Title:</label><br>
@@ -24,8 +24,6 @@
       <a href="/users" id="cancel-btn">Cancel</a>
       <input class="submit-btns" type="submit" value="Update"/>
     </div>
-
   </form>
-</div>
-
-  </main>
+  </div>
+</main>
