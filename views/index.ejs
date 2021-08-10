@@ -1,9 +1,11 @@
 
 <main>
     <div class="hero-box">
-        <img class="hero-pic" src="/img/tokyo-hero-pic.png">
-        <h1 id="hero-text">Tokyo</h1>
+        <div id="overlay">
+            <h1 id="hero-text">Tokyo</h1>
+        </div>
     </div>
+    <!-- <input type="text" id="search-bar" onkeyup=searchActivities() placeholder="Search...">  -->
     <ul class="filter-bar">
         <li><p>filter by:</p></li>
         <li><a href='/tokyo' class="filter-list-item">all</a></li>
@@ -18,7 +20,7 @@
      <% data.forEach(details => { %>
         <div class="activity-container" id="<%= details.title %>">
             <div class="title-price-location-cat-container">
-                <h2 class="text-body" id="title"><%= details.title %></h2>
+                <a href="/tokyo/<%= details.id %>" class="text-body title"><%= details.title %></a>
                 <div class="price-genLocation-cat-container">
                     <p class="text-body" id="price"><%= details.price %> •</p>
                     <p class="text-body" id="category"><%= details.category %> • </p>
@@ -32,7 +34,7 @@
             </div>
             <ul class= "activity-controls">
                 <li><a href="/tokyo/<%= details.id %>" class="activity-btn" id="read-more-btn">Read More</a></li>
-                <li><a href="/users/" class="activity-btn add-btn" data-title="<%= details.title %>">Add to Itinerary</a></li>
+                <li><a href="/users/" class="activity-btn add-btn" data-title="<%= details.title %>"> + Add to Itinerary</a></li>
             </ul>
         </div>
     <% }) %>

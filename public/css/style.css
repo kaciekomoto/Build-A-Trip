@@ -14,10 +14,11 @@ html {
 body{
     background-color: #EBECF0;
     font-family: "Roboto", Arial, sans-serif;
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
+
 main {
     margin: 60px 0px 0px 0px;
     padding-bottom: 2rem;
@@ -55,6 +56,7 @@ p {
 #app-title {
     color: #001221;
     font-size: 1.25rem;
+    font-weight: 600;
     margin-left: 20px;
     text-decoration: none;
     transition: color 0.3s ease-out;
@@ -96,22 +98,31 @@ footer {
 
 /* Index ("Browse Recommendations") page formatting*/
 .hero-box{
+  background: url('../img/tokyo-hero-pic.png');
+  background-size: cover;
+  height: 40vh;
   position: relative;
-  text-align: center;
-  background-color: black;
 }
 
-.hero-pic{
-  max-width: 100%;
-  height: auto;
-  opacity: 0.4;
+#overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
 #hero-text{
   text-transform: uppercase;
-  text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+  text-align: center;
+  text-shadow: 6px 6px 6px #000;
   font-size: 5em;
-  color: #EBECF0;
-  letter-spacing: 20px;
+  color: #e5e6e9;
+  letter-spacing: 10px;
   position: absolute;
   margin: 0 auto;
   left: 0;
@@ -147,6 +158,18 @@ footer {
     padding: 0rem 2rem;
     margin: 0;
 }
+
+.title {
+  color: #0077DD;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.title:hover{
+  text-decoration: underline;
+}
+
 .title-price-location-cat-container{
     padding-top: 2rem;
     padding-bottom: 1.5rem;
@@ -319,7 +342,7 @@ footer {
     border: 0;
     text-align: center;
     font-size: 1rem;
-    color: #3498db;
+    color: #fd3c3c;
     border-radius: 10px;
     background-color: #ffffff;  
 }
@@ -349,7 +372,6 @@ input[type=text], select {
   }
   
   input[class=submit-btns] {
-    width: 250px;
     background-color: #0077DD;
     color: #ffffff;
     padding: 10px 10px;
@@ -358,6 +380,7 @@ input[type=text], select {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
+    width:100px;
   }
   
   input[class=submit-btns]:hover {
@@ -371,7 +394,6 @@ input[type=text], select {
   .new-form-btns{
     display:flex;
     flex-direction: row;
-    width: 300px;
     padding: 10px 10px;
     margin: 8px 0;
     border: none;
@@ -379,11 +401,10 @@ input[type=text], select {
     cursor: pointer;
     text-decoration: none;
 }
+
   #cancel-btn {
-    width: 250px;
     background-color: #d52e2e;
     color: #ffffff;
-    padding: 10px 10px;
     margin: 10px 10px;
     border: none;
     border-radius: 4px;
@@ -391,12 +412,17 @@ input[type=text], select {
     text-decoration: none;
     text-align: center;
     font-size: 1em;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   #cancel-btn:hover {
     background: #fd3c3c;
     text-decoration: underline;
   }
+  
 
   /* User Activity Show View ("/users/:id") */
   .user-show {
@@ -416,8 +442,6 @@ input[type=text], select {
   }
 
   .user-show-btn {
-    width: 150px;
-    text-align: center;
     color: #ffffff;
     padding: 10px 10px;
     margin: 10px 10px;
@@ -425,6 +449,12 @@ input[type=text], select {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    width: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .user-show-btn:hover {
@@ -453,7 +483,6 @@ input[type=text], select {
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 300px;
   padding-top: 10px;
   padding-right: 0;
   border: none;

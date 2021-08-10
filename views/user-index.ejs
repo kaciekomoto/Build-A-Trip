@@ -3,8 +3,8 @@
     <div class="itinerary-layout">
         <h1 id="itinerary-header">Itinerary List:</h1>
     <% data.forEach(details => { %>
-        <div class="itinerary-activity-container" ondrop="dropActivity(e)" ondragover="canDrop(e)">
-        <h2 class="itinerary-text" id="itinerary-title"><%= details.title %></h2>
+        <div class="itinerary-activity-container">
+            <a href="/tokyo/<%= details.id %>" class="itinerary-text title" id="itinerary-title"><%= details.title %></a>
        <ul class= "itinerary-btns-group">
             <li><a href="/users/<%= details.id %>" class="itinerary-btn" id="read-more-btn">Read More</a></li>
             <li><form action="/users/<%= details.id %>?_method=DELETE" method="POST">

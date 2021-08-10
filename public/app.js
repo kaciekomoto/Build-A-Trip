@@ -25,8 +25,26 @@ addActivity.forEach(addButton => {
             })
             .then(data => {
                 console.log(data)
-                res.redirect('/users')
+                // res.redirect('/users')
             })
             .catch(err => console.log('ERROR'))
     })
 })
+
+
+//Search through activities
+let searchBar = document.getElementById('search-bar');
+let filter = searchBar.nodeValue.toLowerCase();
+let container = document.getElementsByClassName('activity-container')
+let activity = document.getElementsByClassName('title')
+
+const searchActivities = () => {
+    for (let i=0; i < activity.length; i++) {
+        let inputVal= activity[i].innerText
+        if (inputVal.toLowerCase().indexOf(filter) > -1) {
+            container[i].style.display= ""
+        } else {
+            container[i].style.display="none"
+        }
+    }
+}
