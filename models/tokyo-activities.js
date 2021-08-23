@@ -3,6 +3,7 @@ const mongoose = require('../db/connection')
 const TokyoActivitySchema = new mongoose.Schema(
     {
         title: String,
+        img: String,
         category: String,
         genLocation: String,
         address: String,

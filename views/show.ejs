@@ -1,31 +1,41 @@
-
 <main>
+
     <div class="show-activity-container">
+        <a href="/tokyo/" id="back-container">
+            <span class="material-icons">keyboard_arrow_left</span>
+            <p id="back-btn">Back</p>
+        </a>
+        <img src="<%= details.img%>" alt="Picture of <%= details.title%>" class="image-show"/>
+    <div class="show-info">
         <div class="title-price-location-cat-container" id="view-upper-text">
             <h2 class="text-body" id="title"><%= details.title %></h2>
+            <hr class="sm-line">
+            <p class="text-body" id="genLocation"><%= details.address %></p>
             <div class="price-genLocation-cat-container">
                 <p class="text-body" id="price"><%= details.price %> •</p>
                 <p class="text-body" id="category"><%= details.category %> •</p>
-                <p class="text-body" id="genLocation"><%= details.genLocation %> •</p>
-                <p class="text-body" id="time"><E%= details.time %></p>
+                <p class="text-body" id="time"><%= details.time %></p>
             </div>
         </div>
-        <p class="view-text" id="website">
-            <span class="labels">Address:</span><br>
-            <%= details.address %>
-        </p>
-        <p class="view-text" id="website">
-            <span class="labels">Website:</span><br>
-            <%= details.website %>
-        </p>
-        <p class="view-text" id="english">
-            <span class="labels">English?</span><br>
-            <%= details.english %>
-        </p>
-        <div class="tips-container">
-            <img class="text-body" id="tips-icon" src="/img/Kacies_Tips_Icons.png" alt="Kacies-Tips-Icon">
-            <p class="text-body" id="tips"><%= details.description %></p>
-        </div>
-        <a href="/tokyo/" class="activity-btn" id="back-btn">Back</a>
+       <a href="/users/" class="show-add-btn add-btn" data-title="<%= details.title %>">+ Add to Itinerary</a>
+    </div>
+    <a href="<%= details.website %>" class="view-text" id="website">
+        <%= details.website %>
+    </a>
+    <div class="view-text english-container">
+        <span class="labels">English?</span>
+        <% if (details.english == 'Yes') { %>
+            <span class="material-icons english">check_circle</span>
+        <%} else if (details.english == 'No'){ %>
+            <span class="material-icons english">cancel</span>
+        <%} else { %>
+            <p class="english"> <%= details.english %> </p>
+        <% } %>
+    </div>
+    <div class="tips-container">
+        <img class="text-body" id="tips-icon" src="/img/Kacies_Tips_Icons.png" alt="Kacies-Tips-Icon">
+        <p class="text-body" id="tips"><%= details.description %></p>
+                </div>
+
     </div>
 </main>

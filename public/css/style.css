@@ -1,19 +1,11 @@
 /* Global Styling */
 html {
-    font-size: 16px;
-      
-    @media screen and (min-width: 900px) {
-      font-size: 18px;
-    }
-      
-    @media screen and (min-width: 1200px) {
-      font-size: 20px;
-    }
+    font-size: 18px;
   }
 
 body{
-    background-color: #EBECF0;
-    font-family: "Roboto", Arial, sans-serif;
+    background-color: #ffffff;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
     border: 0;
     padding: 0;
     margin: 0;
@@ -42,6 +34,7 @@ p {
 /* Partials - Header Formatting */
 .nav-bar{
     display: flex;
+    z-index: 500;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
@@ -98,37 +91,31 @@ footer {
 
 /* Index ("Browse Recommendations") page formatting*/
 .hero-box{
-  background: url('../img/tokyo-hero-pic.png');
+  background: url('../img/hero-pic-su-san-lee-E.png');
   background-size: cover;
-  height: 40vh;
-  position: relative;
-}
-
-#overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 70vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
+.hero-content{
+  display: flex;
+  flex-direction: column;
+}
 
 #hero-text{
-  text-transform: uppercase;
-  text-align: center;
-  text-shadow: 6px 6px 6px #000;
-  font-size: 5em;
-  color: #e5e6e9;
+  font-size: 3em;
+  font-weight: 400;
+  color: #000000;
   letter-spacing: 10px;
   position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+  margin: 0rem 0rem 0rem 4rem;
   top: 30%;
 }
+
 .filter-bar {
     list-style: none;
     display: flex;
@@ -147,31 +134,70 @@ footer {
     text-decoration: underline;
 }
 
+.filter-list-item:active {
+  text-decoration: underline;
+}
+
+.activity-grid{
+  /* display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: 530px auto 530px;
+  column-gap: 10px;
+  row-gap: 15px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .activity-container {
     border-radius: 15px;
+    transition: all .2s ease-in-out;
+    width: 30%;
+    margin: 1rem;
     background-color: #ffffff;
-    width: 60%;
-    margin: 20px auto;
+    border: 1px solid #EBECF0;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+.activity-container:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  transform: scale(1.008);
+}
+
+.image-index {
+  width: 100%;
+  height: 230px;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
 }
 
 .text-body {
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
     margin: 0;
+    text-overflow: ellipsis; 
 }
 
 .title {
   color: #0077DD;
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1em;
+  font-weight: 400;
   text-decoration: none;
+  /* width: 50px;  */
 }
 
 .title:hover{
   text-decoration: underline;
 }
 
+.sm-line{
+  width: 10%;
+  margin-left: 1rem;
+  color: #9c9c9c;
+}
+
 .title-price-location-cat-container{
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 1.5rem;
 }
 
@@ -194,12 +220,13 @@ footer {
   font-size: 0.85rem;
   text-transform: capitalize;
 } 
+
 #genLocation{
-  padding-top: 0.5rem;
-  padding-left: 0.3rem;
-  padding-right: 0rem;
+  /* padding-top: 0.5rem; */
   font-size: 0.85rem;
+  color: #9c9c9c;
 }
+
 #time {
   padding-top: 0.5rem;
   padding-left: 0.3rem;
@@ -208,7 +235,7 @@ footer {
 
 .tips-container {
     padding-bottom: 1rem;
-    padding-top: 0.8rem;
+    /* padding-top: 0.8rem; */
     display: flex;
     flex-direction: row;
 }
@@ -217,23 +244,25 @@ footer {
   padding-left: 10px;
 }
 
-.activity-controls {
+.activity-btn {
     padding: 20px 0px 20px 0px;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     border-top: 1px solid #cfd1d8;
-}
-
-.activity-btn {
-    text-decoration: none;
+    margin: 0;
+    border-radius: 0px 0px 15px 15px;
     color: #0077DD;
+    text-decoration: none;
+    width: 100%;
 }
 
 .activity-btn:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+  background-color: #cfd1d8;
 }
+
 
 #tips-icon {
   width: 50px;
@@ -245,8 +274,27 @@ footer {
 .show-activity-container {
   border-radius: 15px;
   background-color: #ffffff;
-  width: 80%;
+  width:90%;
   margin: 100px auto;
+}
+
+.show-all-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.show-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-show{
+  /* align-self: flex-end; */
+  width: 100%;
+  height: 60vh;
+  border-radius: 10px;
+  margin: 1rem;
+  object-fit: cover;
 }
 
 #view-upper-text{
@@ -254,29 +302,89 @@ footer {
 }
 
 .view-text {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
   margin: 0;
 }
 
-#back-btn{
-  padding: 20px 0px 20px 0px;
-  list-style: none;
+.english-container{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-top: 1px solid #cfd1d8;
+  align-items: center;
 }
 
-/* "My Itinerary" page formatting*/
-#itinerary-page{
+.english{
+  margin-left: 0.5rem;
+}
+
+/* .activity-controls {
+  align-self: flex-end;
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #cfd1d8;
+} */
+
+#back-container{
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  text-decoration: none;
+  color: #0077DD;
+}
+
+#back-btn {
+  list-style: none;
+  color: #0077DD;
+  text-decoration: none;
+}
+
+#back-btn:hover{
+  text-decoration: underline;
+}
+
+.show-add-btn{
+  list-style: none;
+  width: 150px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  /* display:flex; */
+  /* justify-content: center; */
+  margin-top: 1rem;
+  padding: 10px; 
+  color: #0077DD;
+  background-color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #0077DD;
+  /* width: 100%; */
+}
+
+.show-add-btn:hover {
+  color: #ffffff;
+  background-color: #0077DD;
+}
+
+.show-add-btn:active {
+  color: #ffffff;
+  background-color: #0077DD;
+}
+
+
+
+/* "My Itinerary" page formatting (user-show.ejs)*/
+.itinerary-page{
     display: flex;
     flex-direction: column;
+    background-color: #EBECF0;
 }
 
 #create-btn {
     background: #0077DD;
     float: right;
-    border-radius: 25px;
+    border-radius: 5px;
     color: #ffffff;
     font-size: 16px;
     padding: 15px;
@@ -284,7 +392,8 @@ footer {
     margin-right: 20px;
     margin: 2rem 2rem 2rem 0rem;
     text-decoration: none;
-    width: 10rem;
+    width: 200px;
+    text-align: center;
     transition: color 0.3s ease-out;
   }
   
@@ -300,7 +409,7 @@ footer {
   .itinerary-layout{
     border-radius: 15px;
     background-color: #ffffff;
-    width: 60%;
+    width: 80%;
     margin: 20px auto;
   }
   .itinerary-activity-container {
@@ -342,13 +451,13 @@ footer {
     border: 0;
     text-align: center;
     font-size: 1rem;
-    color: #fd3c3c;
+    color: #d52e2e;
     border-radius: 10px;
     background-color: #ffffff;  
 }
 
-input[type=submit]:hover{
-    text-decoration:underline;
+#delete-btn:hover{
+    color:#fd3c3c;
 }
 
 
@@ -492,3 +601,37 @@ input[type=text], select {
 } 
 
 
+/* FOOTER */
+.copywright{
+  margin: 1rem;
+}
+
+
+
+@media screen and (max-width: 1139px) {
+html{
+  font-size: 16px;
+}
+.activity-container {
+  width: 40%;
+}
+}
+
+@media screen and (max-width: 700px) {
+  html{
+    font-size: 16px;
+  }
+  .activity-container {
+    width: 90%;
+  }
+  }
+
+@media screen and (max-width: 400px) {
+  html{
+    font-size: 14px;
+  }
+  .activity-container {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  }
